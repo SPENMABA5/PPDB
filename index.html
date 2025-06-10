@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Siswa Baru (PPDB)</title>
+    <!-- Memuat Tailwind CSS dari CDN untuk styling dasar dan responsif -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter untuk tampilan yang lebih modern -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Menghubungkan file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Mengatur font default untuk seluruh halaman */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-blue-500 to-indigo-600 min-h-screen flex items-center justify-center p-4">
+
+    <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-lg">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Pendaftaran Siswa Baru</h1>
+        <p class="text-center text-gray-600 mb-8">Isi formulir di bawah ini untuk mendaftar.</p>
+
+        <form id="ppdbForm" class="space-y-6">
+            <!-- Nama Lengkap -->
+            <div>
+                <label for="namaLengkap" class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
+                <input type="text" id="namaLengkap" name="namaLengkap" required
+                       class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 transition duration-150 ease-in-out">
+            </div>
+
+            <!-- Tanggal Lahir -->
+            <div>
+                <label for="tanggalLahir" class="block text-sm font-medium text-gray-700 mb-1">Tanggal Lahir</label>
+                <input type="date" id="tanggalLahir" name="tanggalLahir" required
+                       class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 transition duration-150 ease-in-out">
+            </div>
+
+            <!-- Jenis Kelamin -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Jenis Kelamin</label>
+                <div class="mt-2 space-x-4 flex">
+                    <label class="inline-flex items-center">
+                        <input type="radio" name="jenisKelamin" value="Laki-laki" required
+                               class="form-radio h-4 w-4 text-blue-600 transition duration-150 ease-in-out">
+                        <span class="ml-2 text-gray-700">Laki-laki</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                        <input type="radio" name="jenisKelamin" value="Perempuan" required
+                               class="form-radio h-4 w-4 text-blue-600 transition duration-150 ease-in-out">
+                        <span class="ml-2 text-gray-700">Perempuan</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Alamat Email -->
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Alamat Email</label>
+                <input type="email" id="email" name="email" required
+                       class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 transition duration-150 ease-in-out">
+            </div>
+
+            <!-- Nomor Telepon -->
+            <div>
+                <label for="nomorTelepon" class="block text-sm font-medium text-gray-700 mb-1">Nomor Telepon</label>
+                <input type="tel" id="nomorTelepon" name="nomorTelepon" required
+                       class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 transition duration-150 ease-in-out">
+            </div>
+
+            <!-- Alamat Lengkap -->
+            <div>
+                <label for="alamat" class="block text-sm font-medium text-gray-700 mb-1">Alamat Lengkap</label>
+                <textarea id="alamat" name="alamat" rows="3" required
+                          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 transition duration-150 ease-in-out"></textarea>
+            </div>
+
+            <!-- Pesan Sukses (tersembunyi secara default) -->
+            <div id="successMessage" class="hidden bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg relative" role="alert">
+                <strong class="font-bold">Berhasil!</strong>
+                <span class="block sm:inline">Pendaftaran Anda telah berhasil disubmit.</span>
+            </div>
+
+            <!-- Tombol Submit -->
+            <div>
+                <button type="submit"
+                        class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 font-semibold text-lg transition duration-200 ease-in-out shadow-lg">
+                    Daftar Sekarang
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Menghubungkan file JavaScript eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+/* style.css */
+
+/*
+   File ini berisi styling tambahan jika diperlukan,
+   selain dari kelas-kelas Tailwind CSS yang sudah diterapkan langsung di HTML.
+   Untuk proyek ini, sebagian besar styling menggunakan Tailwind.
+*/
+
+/* Contoh styling kustom (tidak digunakan secara langsung di HTML saat ini,
+   tetapi bisa ditambahkan untuk elemen kustom lainnya) */
+.custom-button {
+    background-color: #4CAF50; /* Hijau */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #45a049;
+}
+
+/* Responsif dasar untuk elemen form yang tidak sepenuhnya dihandle Tailwind
+   (biasanya Tailwind sudah cukup, ini hanya contoh) */
+@media (max-width: 640px) {
+    /* Pada layar kecil, sesuaikan padding atau ukuran font jika diperlukan */
+    .p-8 {
+        padding: 1.5rem; /* Mengurangi padding sedikit untuk layar yang lebih kecil */
+    }
+    .text-3xl {
+        font-size: 2rem; /* Mengurangi ukuran judul */
+    }
+}
